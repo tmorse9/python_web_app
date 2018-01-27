@@ -63,6 +63,8 @@ def new_user():
       'description': request.form['description']
     }
 
+
+
     #Save to DB
     #db.todos.insert_one(item_doc)
 
