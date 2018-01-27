@@ -6,8 +6,12 @@
     <div class="panel-group">
       {% for profile in profiles %}
         <div class="panel panel-info">
-          <div class="panel-heading">{{  profile.person  }}</div>
-          <div class="panel-body"> {{ profile.gamer_tag }}</div>
+          <div class="panel-heading">{{  profile.gamer_tag  }}</div>
+          <div class="panel-body">
+            Top Games: {{ profile.top_games }} </br>
+            Prefered System: {{ profile.prefered_system }} </br>
+            Owned Systems: {{ profile.systems }}
+          </div>
         </div>
       {% endfor %}
     </div>

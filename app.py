@@ -24,6 +24,7 @@ def mainNavBar():
       'prlmos',
       View('Home', 'home'),
       View('The Team', 'prlmos_show'),
+      View('Gallery', 'prlmos_gallery'),
     #   Subgroup(
     #     'Docs',
     #     Link('Flask-Bootstrap', 'http://pythonhosted.org/Flask-Bootstrap'),
@@ -48,9 +49,9 @@ def home():
     profiles = db.profiles
     #NOTE: add in more dynamic features, could create game and system table, call person for USERS etc
     first_profile = {'person': "Tom", 'top_games': "siege, gta5, idk", 'gamer_tag':"DarthGates", 'systems':"PS4, PC", 'prefered_system':"PS4"}
-    #result_1 =  profiles.insert_one(first_profile)
+    result_1 =  profiles.insert_one(first_profile)
     first_user = {'name':"Tom",'gamer_tag':"DarthGates",'password':"test1"}
-    #result_2 = users_table.insert_one(first_user)
+    result_2 = users_table.insert_one(first_user)
     #users = [item for item in _items]
     #render index
     return render_template("index.html")
@@ -73,6 +74,13 @@ def prlmos_show():
     profiles = [profile for profile in _profiles]
 
     return render_template('prlmos.html', profiles=profiles)
+
+@app.route('/gallery', methods=['GET'])
+def prlmos_gallery():
+    #_profiles = db.profiles.find()
+    #profiles = [profile for profile in _profiles]
+
+    return render_template('gallery.html')#, profiles=profiles)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
