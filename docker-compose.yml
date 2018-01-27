@@ -6,7 +6,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - .:/todo
+      - .:/prlmos_app
     links:
       - 'mongodb'
     depends_on:

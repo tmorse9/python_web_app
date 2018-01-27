@@ -1,9 +1,15 @@
-<!doctype html>
-<head></head>
-<body>
-<h1>HELLO PRLMOS</h1>
-{% for profile in profiles %}
-<h2>{{  profile.person  }}</h2>
-<p> {{ profile.gamer_tag }}</p>
-{% endfor %}
-</body>
+{% extends "base.html" %}
+
+
+{% block content %}
+  <div class="container">
+    <div class="panel-group">
+      {% for profile in profiles %}
+        <div class="panel panel-info">
+          <div class="panel-heading">{{  profile.person  }}</div>
+          <div class="panel-body"> {{ profile.gamer_tag }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
