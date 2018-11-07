@@ -2,5 +2,13 @@
 
 
 {% block content %}
-<h1>To be the galary</h1>
+<h1>This IS the galary!</h1>
+<p>There are many member of prlmos, here are a few pictures of them in action!</p>
+<h2 style="color:purple">The main member, Darth Gates, geared up ready for a fight.</h2>
+<p style="color:red" title="Darthgates action pictures"> Photos to the below</p>
+<img src={{url_for('static',filename='darthgates.jpeg')}} width="400" hight="400">
+<h3 style="color:blue"> Tantan The extreme II</h3>
+<p> Who could forget the resident Tantan of the team. Here is a picture of him right after a tough battle</p>
+<img src={{url_for('static',filename='tauntaun.jpeg')}} width="250" hight="250">
+<h4> How does one make it so that they can scroll on the page? </h4>
 {% endblock %}
