@@ -2,13 +2,132 @@
 
 
 {% block content %}
-<h1>This IS the galary!</h1>
+<h1 style="text-align:center; color: deepPink;">This <mark style="background-color:purple; color:honeydew">IS</mark> the gallary!</h1><hr>
 <p>There are many member of prlmos, here are a few pictures of them in action!</p>
 <h2 style="color:purple">The main member, Darth Gates, geared up ready for a fight.</h2>
-<p style="color:red" title="Darthgates action pictures"> Photos to the below</p>
+<em style="color:red" title="Darthgates action pictures"> Photos to the below</em>
+<a href="https://www.youtube.com/watch?v=Flyb6Sj6b_0">Here is an awesome viedo of Darthgates doing his thing.</a> <br>
 <img src={{url_for('static',filename='darthgates.jpeg')}} width="400" hight="400">
 <h3 style="color:blue"> Tantan The extreme II</h3>
 <p> Who could forget the resident Tantan of the team. Here is a picture of him right after a tough battle</p>
-<img src={{url_for('static',filename='tauntaun.jpeg')}} width="250" hight="250">
+<img src={{url_for('static',filename='tauntaun.jpeg')}} width="250" hight="250"></img>
+<a href="https://www.youtube.com/watch?v=C6SxKNVTFxc" target="_parent"> As you can see, he is very dedicated to his duty.</a> <br>
 <h4> How does one make it so that they can scroll on the page? </h4>
+<p style="border: 2px solid white; padding: 10px; margin 30px;"><b>Don't forget about the Bhombino!</b></p>
+<p class="error"> What does this do?</p>
+<h3 class="bob">I hope this worked</h3>
+<a href="https://www.rocketleague.com/" title="These turkeys will take you to Rocket League!"><img src={{url_for('static',filename='turkey.jpeg')}} width="260" hight="260"></a>
+<img src={{url_for('static',filename='cat.jpeg')}} width="260" hight="260" alt="Cat with cool glasses">
+<p class="bob"><img src={{url_for('static',filename='workingcow.gif')}} width="260" hight="260" alt="the newest memeber of the club" style="float:right"> Let's see how this does</p>
+<p class="moo"> How much do I need to type for this background picture to work? If I add more text will that fix the problem? no one is quite sure at this point. if only we could find an answer. Hopefully one day man will hold enough knowledge to find this answer. Untill then i will continue to type my life away.</p>
+<table class="table1 table">
+  <caption>Members and their likeness.</caption>
+  <tr style="color:darkgreen">
+    <th>Darth Gates</th>
+    <th>Tantan</th>
+    <th>Bhombino</th>
+    </tr>
+    <tr style="color:darkmagenta">
+    <td>He will crush all his foes with one fell swoop.</td>
+    <td>Only likes Red Dead for the hunting</td>
+    <td>Rocket League Pro</td>
+    </tr>
+    <tfoot>
+    <tr style="color:Darkred">
+      <td>something about something</td>
+      <td>something else about something</td>
+      <td>blowtorch</td>
+      </tr>
+      </tfoot>
+    </table>
+<ul style="list-style-type:square">
+  <li>Jeep</li>
+  <li>Audi</li>
+  <li>Ford</li>
+  </ul>
+<ol type="I">
+  <li>God of War</li>
+  <li>Siege</li>
+  <li>Rocket league</li>
+  </ol>
+<ol type="A">
+  <li>cheese</li>
+  <li>regular cheese
+    <ul>
+      <li>American</li>
+      <li> <img src={{url_for('static',filename='cheese.jpeg')}}> cheddar </img></li>
+      </ul>
+      </li>
+      <li> fancy cheese</li>
+      </ol>
+<dl>
+  <dt>Cow</dt>
+  <dd>- a large animal that moos</dd>
+  <dt>Chicken</dt>
+  <dd>- a smaller animal that chases you</dd>
+  </dl>
+<h3>The <span style="color:deeppink"> NEWEST</span> and <span style="color:yellow"> BEST</span> header to date</h3>
+<p>This <span class="inside"> WILL BE</span> different <span style="color:white; font-size: 130%"> colors.</span></p>
+<h3 class="test"> Hopefully this is centered.</h3>
+
+
+<style>
+body {
+background-color:lightsteelblue;
+}
+.test {
+  background-color: lightsalmon;
+  padding: 14px;
+  color: limegreen;
+  text-align: center;
+
+}
+.table1 {
+  border: 3px solid darkorange;
+  background-color:deepskyblue;
+  border-spacing: 3px;
+  padding: 15px;
+  margin: 20px;
+  style=color:darkgreen;
+}
+span.inside {
+  color:green;
+  font-size:140%
+}
+a:link {
+  color:peachwhip;
+  background-color:transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:snow;
+  background-color:salmon;
+  text-decoration: underline;
+}
+a:hover {
+  color:crimson;
+  background-color:transparent;
+  text-decoration: none;
+}
+a:active{
+  color:teal;
+  background-color:transparent;
+  text-decoration: none;
+}
+.moo {
+  background-image: url({{url_for('static',filename='reddead.jpeg')}});
+  color:white;
+  width:20%
+}
+p.error {
+  color:yellow
+}
+.bob {
+  color:mediumblue;
+  text-align:right;
+  text-decoration: bold;
+}
+</style>
+
+
 {% endblock %}
