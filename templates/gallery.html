@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<h1 style="text-align:center; color: deepPink;">This <mark style="background-color:purple; color:honeydew">IS</mark> the gallary!</h1><hr>
+<h1 style="text-align:center; color: deepPink;">This <mark style="background-color:purple; color:honeydew">IS</mark> the Gallery!</h1><hr>
 <p>There are many member of prlmos, here are a few pictures of them in action!</p>
 <h2 style="color:purple">The main member, Darth Gates, geared up ready for a fight.</h2>
 <em style="color:red" title="Darthgates action pictures"> Photos to the below</em>
@@ -14,6 +14,7 @@
 <a href="https://www.youtube.com/watch?v=C6SxKNVTFxc" target="_parent"> As you can see, he is very dedicated to his duty.</a> <br>
 <h4> How does one make it so that they can scroll on the page? </h4>
 <p style="border: 2px solid white; padding: 10px; margin 30px;"><b>Don't forget about the Bhombino!</b></p>
+<p><a href="#Longwebsite">Jump to long web site</a></p>
 <p class="error"> What does this do?</p>
 <h3 class="bob">I hope this worked</h3>
 <a href="https://www.rocketleague.com/" title="These turkeys will take you to Rocket League!"><img src={{url_for('static',filename='turkey.jpeg')}} width="260" hight="260"></a>
@@ -55,7 +56,7 @@
   <li>regular cheese
     <ul>
       <li>American</li>
-      <li> <img src={{url_for('static',filename='cheese.jpeg')}}> cheddar </img></li>
+      <li> <img src={{url_for('static',filename='cheese.jpeg')}} width="150" hight="150"> cheddar </img></li>
       </ul>
       </li>
       <li> fancy cheese</li>
@@ -68,12 +69,42 @@
   </dl>
 <h3>The <span style="color:deeppink"> NEWEST</span> and <span style="color:yellow"> BEST</span> header to date</h3>
 <p>This <span class="inside"> WILL BE</span> different <span style="color:white; font-size: 130%"> colors.</span></p>
+<p id="java"></p>
 <h3 class="test"> Hopefully this is centered.</h3>
+<h1 id="header1">testing an id out</h1>
+<p id="Longwebsite"><a href="http://www.onemilescroll.com/">ignore</a></p>
+<iframe src="https://www.google.com/" name="fallout76"></iframe>
+<p><a href="https://www.w3schools.com/html/" target="fallout76">Ask bubble about next time</a></p>
+<p id="Nibbles">I wonder what this will do.</p>
+<button type="button" onclick="cows()" style="background-color:orange">Click here!</button>
+<button type="button" onclick="document.getElementById('date').innerHTML = Date()"> The Date</button>
+<p id="date"></p>
+<script>
+  function cows() {
+    document.getElementById("Nibbles").style.fontSize = "130%";
+    document.getElementById("Nibbles").style.color = "peru";
+    document.getElementById("Nibbles").style.backgroundColor = "palegoldenrod";
+  }
+</script>
+<script>
 
-
+  document.getElementById("java").innerHTML = "What am I doing?";
+</script>
+<noscript>
+  Sorry you suck and don't support Javascript!
+</noscript>
+<meta name="Gallery" content="clan gallery">
+<meta name="keywords" content="prlmos, darthgates">
+<meta http-equiv="refresh" content="90">
+<meta name="viewpoint" content="width=divice-width, initial-scale=1.0">
 <style>
 body {
 background-color:lightsteelblue;
+}
+#header1 {
+  text-align: right;
+  background-color:cyan;
+  font-size:200%;
 }
 .test {
   background-color: lightsalmon;
