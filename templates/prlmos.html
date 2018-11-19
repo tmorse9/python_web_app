@@ -6,11 +6,11 @@
     <div class="panel-group">
       {% for profile in profiles %}
         <div class="panel panel-info">
-          <div class="panel-heading">{{  profile.gamer_tag  }}</div>
+          <div class="panel-heading">Prefered Gamer Tag: {{  profile.gamer_tag  }}</div>
           <div class="panel-body">
-            Top Games: {{ profile.top_games }} <br>
+            Current Games: {{ profile.current_games }} <br>
             Prefered System: {{ profile.prefered_system }} <br>
-            Owned Systems: {{ profile.systems }}
+            Top Games: {{ profile.top_games }}
           </div>
         </div>
       {% endfor %}

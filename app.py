@@ -25,6 +25,7 @@ def mainNavBar():
       View('Home', 'home'),
       View('The Team', 'prlmos_show'),
       View('Gallery', 'prlmos_gallery'),
+      View('Cow', 'prlmos_cow')
     #   Subgroup(
     #     'Docs',
     #     Link('Flask-Bootstrap', 'http://pythonhosted.org/Flask-Bootstrap'),
@@ -48,10 +49,18 @@ def home():
     users_table = db.users
     profiles = db.profiles
     #NOTE: add in more dynamic features, could create game and system table, call person for USERS etc
-    first_profile = {'person': "Tom", 'top_games': "siege, gta5, idk", 'gamer_tag':"DarthGates", 'systems':"PS4, PC", 'prefered_system':"PS4"}
-    result_1 =  profiles.insert_one(first_profile)
+    # first_profile = {'person': "Tom", 'top_games': "siege, gta5, red dead 2", 'current_games': "red dead 2, siege, splatoon", 'gamer_tag': "DarthGates", 'systems': "PS4, PC, Switch", 'prefered_system': "PS4", 'display_color': "orange"}
+    # profile_2 = {'person': "Chris", 'top_games': "siege, fallout 76, rocket league", 'current_games': "dead by daylight, rocket league, fortnite", 'gamer_tag': "crazy_cow16", 'systems': "PS4, PC", 'prefered_system': "PS4", 'display_color': "darkorange"}
+    # profile_3 = {'person': "Tanner", 'top_games': "siege, Divinity 2, monster hunter", 'current_games': "league of legends, wow, divinity 2", 'gamer_tag': "tantanextreme2", 'systems': "PS4, PC", 'prefered_system': "PS4", 'display_color': "mediumblue"}
+    # profile_4 = {'person': "Jordan", 'top_games': "witcher 3, god of war, red dead 2", 'current_games': "red dead 2", 'gamer_tag': "Jortw91", 'systems': "PS4, Switch, PC", 'prefered_system': "PS4", 'display_color': "purple"}
+    # profile_5 = {'person': "Travis", 'top_games': "red dead 2, splatoon", 'current_games': "red dead 2, splatoon", 'gamer_tag': "darthbewbies", 'systems': "PS4, Switch", 'prefered_system': "PS4", 'display_color': "Red"}
+    # result_1 =  profiles.insert_one(first_profile)
+    # result_2 =  profiles.insert_one(profile_2)
+    # result_3 =  profiles.insert_one(profile_3)
+    # result_4 =  profiles.insert_one(profile_4)
+    # result_5 =  profiles.insert_one(profile_5)
     first_user = {'name':"Tom",'gamer_tag':"DarthGates",'password':"test1"}
-    result_2 = users_table.insert_one(first_user)
+    result_user_2 = users_table.insert_one(first_user)
     #users = [item for item in _items]
     #render index
     return render_template("index.html")
@@ -83,6 +92,11 @@ def prlmos_gallery():
     #profiles = [profile for profile in _profiles]
 
     return render_template('gallery.html')#, profiles=profiles)
+
+@app.route('/cow', methods=['GET'])
+def prlmos_cow():
+
+    return render_template('cow.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
