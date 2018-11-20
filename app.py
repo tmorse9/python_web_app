@@ -42,14 +42,16 @@ def mainNavBar():
 
 nav.init_app(app)
 
+
 @app.route('/')
 def home():
     _users = db.users.find()
     users_table = db.users
-    profiles = db.profiles
+    db_seed()
+    #profiles = db.profiles
     #NOTE: add in more dynamic features, could create game and system table, call person for USERS etc
-    first_profile = {'person': "Tom", 'top_games': "siege, gta5, idk", 'gamer_tag':"DarthGates", 'systems':"PS4, PC", 'prefered_system':"PS4"}
-    result_1 =  profiles.insert_one(first_profile)
+    #first_profile = {'person': "Tom", 'top_games': "siege, gta5, idk", 'gamer_tag':"DarthGates", 'systems':"PS4, PC", 'prefered_system':"PS4"}
+    #result_1 =  profiles.insert_one(first_profile)
     first_user = {'name':"Tom",'gamer_tag':"DarthGates",'password':"test1"}
     result_2 = users_table.insert_one(first_user)
     #users = [item for item in _items]
@@ -83,6 +85,24 @@ def prlmos_gallery():
     #profiles = [profile for profile in _profiles]
 
     return render_template('gallery.html')#, profiles=profiles)
+
+def db_seed():
+    profiles = db.profiles
+    array = [{'person': "Tom", 'top_games': "fallout 76", 'current_games': "red dead 2, siege, splatoon", 'gamer_tag': "DarthGates", 'systems': "PS4, PC, Switch", 'prefered_system': "PS4", 'display_color': "orange"},
+             {'person': "Chris", 'top_games': "siege, fallout 76, rocket league", 'current_games': "dead by daylight, rocket league, fortnite", 'gamer_tag': "crazy_cow16", 'systems': "PS4, PC", 'prefered_system': "PS4", 'display_color': "darkorange"},
+             {'person': "Tanner", 'top_games': "siege, Divinity 2, monster hunter", 'current_games': "league of legends, wow, divinity 2", 'gamer_tag': "tantanextreme2", 'systems': "PS4, PC", 'prefered_system': "PS4", 'display_color': "mediumblue"},
+             {'person': "Jordan", 'top_games': "witcher 3, god of war, red dead 2", 'current_games': "red dead 2", 'gamer_tag': "Jortw91", 'systems': "PS4, Switch, PC", 'prefered_system': "PS4", 'display_color': "purple"},
+             {'person': "Travis", 'top_games': "red dead 2, splatoon", 'current_games': "red dead 2, splatoon", 'gamer_tag': "darthbewbies", 'systems': "PS4, Switch", 'prefered_system': "PS4", 'display_color': "Red"},
+             {'person': "Griff", 'top_games': "red dead 2", 'current_games': "red dead 2", 'gamer_tag': "so_taylor", 'systems': "PS4", 'prefered_system': "PS4", 'display_color': "Red"}]
+
+    for a in array:
+        person = profiles.find_one({'person': a['person']})
+        if person is None:
+            print "Adding new user {a['person']} not found"
+            result_1 =  profiles.insert_one( a )
+
+     #Start next block here
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
