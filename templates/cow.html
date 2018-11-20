@@ -2,7 +2,13 @@
 
 
 {% block content %}
-<h1 This is the cow test pages</h1>
-
-
+<h1> This is the cow test page</h1>
+<style>
+body {
+  background-image: url({{url_for('static',filename='random.jpeg')}});
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment:fixed;
+}
+</style>
 {% endblock %}
