@@ -16,4 +16,27 @@
       {% endfor %}
     </div>
   </div>
+  <div class="databaseoutput">
+    {% for role in roles %}
+      <p> {{ role.name }} </p>
+    {% endfor %}
+
+    {% for user in users %}
+      <p> {{ user.first_name }} </p>
+    {% endfor %}
+
+    {% for profile in profiles %}
+      <p> {{ profile.gamer_tag }} </p>
+    {% endfor %}
+
+    {% for system in systems %}
+      <p> {{ system.name }} </p>
+    {% endfor %}
+
+    {% for game in games %}
+      <p> {{ game.name }} </p>
+      <p> {{ game.system }} </p>
+    {% endfor %}
+
+  </div>
 {% endblock %}
