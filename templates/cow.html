@@ -2,8 +2,39 @@
 
 
 {% block content %}
-<h1> This is the cow test page</h1>
+<div style="background-color:orange">
+ <h1 class="border" style="text-align:center; color:deepPink"> This is the cow test page</h1>
+  <p class="border2" style="color:deepskyblue">This page will include many different CSS tests</p>
+  <p id="border3">This first section is the border section if you haven't noticed yet.</p>
+  <p id="border4" style="text-align:right"> I have to put text here to see what the border will look like</p>
+</div>
+<h2 style="max-width:100px">what happens if i make this too big to fit in the max width?</h2>
+ <p>we saw what happened with the h2 now lets see where it puts this p</p>
 <style>
+.border {
+  border-style:dotted;
+  border-bottom-style:solid;
+  border-bottom-width:10px;
+  border-width: 8px;
+  margin-right: 225px;
+  margin-left: 225px;
+}
+.border2 {
+  border-style:dashed dotted;
+  margin:auto;
+  width:50%;
+  text-align:center;
+}
+#border3 {
+  border: .25cm solid purple;
+  width:50%;
+  text-align:left;
+  padding:0px;
+}
+#border4 {
+  border: .25cm double black;
+  border-radius: 4px;
+}
 body {
   background-image: url({{url_for('static',filename='random.jpeg')}});
   background-repeat: no-repeat;
