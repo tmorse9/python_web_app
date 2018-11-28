@@ -3,4 +3,9 @@
 
 {% block content %}
 <h1>Welcome to PRLMOS</h1>
+<style>
+  body {
+    background: #A52A2A url({{url_for('static',filename='random.jpeg')}}) no-repeat center fixed;
+  }
+</style>
 {% endblock %}

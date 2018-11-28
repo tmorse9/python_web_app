@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="background-color:orange">
+  <h1 class="border" style="text-align:center; color:deepPink"> This is the cow test page</h1>
+    <p class="border2" style="color:deepskyblue">This page will include many different CSS tests</p>
+    <p id="border3">This first section is the border section if you haven't noticed yet.</p>
+    <p id="border4" style="text-align:right"> I have to put text here to see what the border will look like</p>
+</div>
+<h2 class="h2">What happens if I make this too big to fit in the max width?</h2>
+ <h3 class="textalt">This is the begining of the CSS text altering section</h3>
+   <p style="letter-spacing:1px">we saw what happened with the h2 now lets see where it puts this p</p>
+   <p class="jtext"> Attachment apartments in delightful by motionless it no. And now she burst sir learn total. Hearing hearted shewing own ask. Solicitude uncommonly use her motionless not collecting age. The properly servants required mistaken outlived bed and. Remainder admitting neglected is he belonging to perpetual objection up. Has widen too you decay begin which asked equal any. </p>
+   <p style="text-decoration: line-through; font-style:oblique"> Normally links are underlinded, but with this command they are not<a href="https://www.google.com/"> google</a></p>
+   <p style="direction:rtl"><bdo dir="rtl">This text will not be the easiest to read. ps. tacocat</bdo></p>
+   <p style="font-family:lucida console,monaco,monospace"> I would like to see if the font is different or if I need to add quotes.</p>
+   <p class="vw">This vw is interesting</p>
+    <h4 style="text-align:center; color:darkgreen"> Time to make fancy links </h4>
+     <a class="one" href="gallery" target="_blank">Back to gallery</a>
+     <i class="glyphicon glyphicon-cloud"></i>
+    
+
+<style>
+  a.one:link, a.one:visited {
+    background-color: deepskyblue;
+    padding: 1em 3em;
+    text-align:center;
+    display:inline-block;
+  }
+.vw {
+  font-size:5vw;
+  background-color:salmon;
+  color:yellow;
+}
+.textalt {
+  color:darkmagenta;
+  letter-spacing:1.5px;
+  text-align:center;
+  text-decoration:underline;
+  word-spacing:5px;
+  text-shadow: 4px 3px black;
+  font-weight:bold;
+}
+.h2 {
+  max-width:125px;
+  text-align:justify;
+  text-indent:50px;
+  font-variant:small-caps;
+}
+.jtext {
+  text-align: justify;
+  margin: 50px;
+  color:red;
+  text-indent:50px;
+  line-height:2.0;
+  font-size:1.575em;
+}
+.border {
+  border-style:dotted;
+  border-bottom-style:solid;
+  border-bottom-width:10px;
+  border-width: 8px;
+  margin-right: 225px;
+  margin-left: 225px;
+}
+.border2 {
+  border-style:dashed dotted;
+  margin:auto;
+  width:50%;
+  text-align:center;
+}
+#border3 {
+  border: .25cm solid purple;
+  width:50%;
+  text-align:left;
+  padding:0px;
+}
+#border4 {
+  border: .25cm double black;
+  border-radius: 4px;
+  margin-left: 100px;
+  margin-right: 50px;
+  outline: .25cm solid black;
+  outline-offset: 10px;
+}
+body {
+  background-image: url({{url_for('static',filename='random.jpeg')}});
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment:fixed;
+}
+body {
+  font-size:100%;
+}
+h1 {
+  font-size:2.7em;
+}
+h2 {
+  font-size:2.0em;
+}
+p {
+  font-size:1.4em;
+}
+</style>
+{% endblock %}

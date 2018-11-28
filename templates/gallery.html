@@ -2,5 +2,161 @@
 
 
 {% block content %}
-<h1>To be the galary</h1>
+<h1 style="text-align:center; color: deepPink;">This <mark style="background-color:purple; color:honeydew">IS</mark> the Gallery!</h1><hr>
+<p>There are many member of prlmos, here are a few pictures of them in action!</p>
+<h2 style="color:purple">The main member, Darth Gates, geared up ready for a fight.</h2>
+<em style="color:red" title="Darthgates action pictures"> Photos to the below</em>
+<a href="https://www.youtube.com/watch?v=Flyb6Sj6b_0">Here is an awesome viedo of Darthgates doing his thing.</a> <br>
+<img src={{url_for('static',filename='darthgates.jpeg')}} width="400" hight="400">
+<h3 style="color:blue"> Tantan The extreme II</h3>
+<p> Who could forget the resident Tantan of the team. Here is a picture of him right after a tough battle</p>
+<img src={{url_for('static',filename='tauntaun.jpeg')}} width="250" hight="250"></img>
+<a href="https://www.youtube.com/watch?v=C6SxKNVTFxc" target="_parent"> As you can see, he is very dedicated to his duty.</a> <br>
+<h4> How does one make it so that they can scroll on the page? </h4>
+<p style="border: 2px solid white; padding: 10px; margin 30px;"><b>Don't forget about the Bhombino!</b></p>
+<p><a href="#Longwebsite">Jump to long web site</a></p>
+<p class="error"> What does this do?</p>
+<h3 class="bob">I hope this worked</h3>
+<a href="https://www.rocketleague.com/" title="These turkeys will take you to Rocket League!"><img src={{url_for('static',filename='turkey.jpeg')}} width="260" hight="260"></a>
+<img src={{url_for('static',filename='cat.jpeg')}} width="260" hight="260" alt="Cat with cool glasses">
+<p class="bob"><img src={{url_for('static',filename='workingcow.gif')}} width="260" hight="260" alt="the newest memeber of the club" style="float:right"> Let's see how this does</p>
+<p class="moo"> How much do I need to type for this background picture to work? If I add more text will that fix the problem? no one is quite sure at this point. if only we could find an answer. Hopefully one day man will hold enough knowledge to find this answer. Untill then i will continue to type my life away.</p>
+<table class="table1 table">
+  <caption>Members and their likeness.</caption>
+  <tr style="color:darkgreen">
+    <th>Darth Gates</th>
+    <th>Tantan</th>
+    <th>Bhombino</th>
+    </tr>
+    <tr style="color:darkmagenta">
+    <td>He will crush all his foes with one fell swoop.</td>
+    <td>Only likes Red Dead for the hunting</td>
+    <td>Rocket League Pro</td>
+    </tr>
+    <tfoot>
+    <tr style="color:Darkred">
+      <td>something about something</td>
+      <td>something else about something</td>
+      <td>blowtorch</td>
+      </tr>
+      </tfoot>
+    </table>
+<ul style="list-style-type:square">
+  <li>Jeep</li>
+  <li>Audi</li>
+  <li>Ford</li>
+  </ul>
+<ol type="I">
+  <li>God of War</li>
+  <li>Siege</li>
+  <li>Rocket league</li>
+  </ol>
+<ol type="A">
+  <li>cheese</li>
+  <li>regular cheese
+    <ul>
+      <li>American</li>
+      <li> <img src={{url_for('static',filename='cheese.jpeg')}} width="150" hight="150"> cheddar </img></li>
+      </ul>
+      </li>
+      <li> fancy cheeze</li>
+      </ol>
+<dl>
+  <dt>Cow</dt>
+  <dd>- a large animal that moos</dd>
+  <dt>Chicken</dt>
+  <dd>- a smaller animal that chases you</dd>
+  </dl>
+<h3>The <span style="color:deeppink"> NEWEST</span> and <span style="color:yellow"> BEST</span> header to date</h3>
+<p>This <span class="inside"> WILL BE</span> different <span style="color:white; font-size: 130%"> colors.</span></p>
+<p id="java"></p>
+<p class="test">moo</p>
+<h3 class="test"> Hopefully this is centered.</h3>
+<h1 id="header1">testing an id out</h1>
+<p id="Longwebsite"><a href="http://www.onemilescroll.com/">ignore</a></p>
+<iframe hight="315" width="560" src="https://www.youtube.com/embed/tgbNymZ7vqY" name="fallout76"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5IcqE8kT3KA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://www.w3schools.com/html" target="fallout76">Ask bubble about next time</a></p>
+<p id="Nibbles">I wonder what this will do.</p>
+<button type="button" onclick="cows()" style="background-color:orange">Click here!</button>
+<button type="button" onclick="document.getElementById('date').innerHTML = Date()"> The Date</button>
+<p id="date"></p>
+<script>
+  function cows() {
+    document.getElementById("Nibbles").style.fontSize = "130%";
+    document.getElementById("Nibbles").style.color = "peru";
+    document.getElementById("Nibbles").style.backgroundColor = "palegoldenrod";
+  };
+  document.getElementById("java").innerHTML = "What am I doing?";
+</script>
+<noscript>
+  Sorry you suck and don't support Javascript!
+</noscript>
+<meta name="Gallery" content="clan gallery">
+<meta name="keywords" content="prlmos, darthgates">
+<meta name="viewpoint" content="width=divice-width, initial-scale=1.0">
+<style>
+body {
+background-color:lightsteelblue;
+}
+#header1 {
+  text-align: right;
+  background-color:cyan;
+  font-size:200%;
+}
+.test {
+  background-color: lightsalmon;
+  padding: 14px;
+  color: limegreen;
+  text-align: center;
+
+}
+.table1 {
+  border: 3px solid darkorange;
+  background-color:deepskyblue;
+  border-spacing: 3px;
+  padding: 15px;
+  margin: 20px;
+  style=color:darkgreen;
+}
+span.inside {
+  color:green;
+  font-size:140%
+}
+a:link {
+  color:peachwhip;
+  background-color:transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:snow;
+  background-color:salmon;
+  text-decoration: underline;
+}
+a:hover {
+  color:crimson;
+  background-color:transparent;
+  text-decoration: none;
+}
+a:active{
+  color:teal;
+  background-color:transparent;
+  text-decoration: none;
+}
+.moo {
+  background-image: url({{url_for('static',filename='reddead.jpeg')}});
+  color:white;
+  width:20%
+}
+p.error {
+  color:yellow
+}
+.bob {
+  color:mediumblue;
+  text-align:right;
+  text-decoration: bold;
+}
+</style>
+
+
 {% endblock %}

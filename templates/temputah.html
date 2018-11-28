@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1 class="titles">Considering Visiting Utah?<img src={{url_for('static',filename='logo.png')}} style="float:right" width="170px" height="130px"</h1>
+ <h2 class="titles" style="text-decoration:underline">Getting There</h2>
+  <h4>Costs:</h4>
+   <p>The cost of flights and the time of the flight greatly depend on how much you want to spend and which airport you want to leave from.<br>We will to arriving 2/16 and leaving 2/19.</p>
+   <table class="table">
+     <tr>
+       <th>New York airports</th>
+       <th>Hartford</th>
+       <th>Philadelphia</th>
+       <th>Boston</th>
+     </tr>
+     <tr>
+       <th>~$400 looong trips bad hours.
+       <th>$400 a person 2 stops(not a good choice). 13 hours one way, 8 other.
+       <th>$300 a person nonstop round trip. 5 hours each way. 7-10pm, 12-6am
+       <th>$500 a person for round trip. 7 hours each way 4pm-10pm, 8pm-5am
+     </tr>
+   </table>
+   <p>The airport you will be arriving at will be Salt Lake City. From the airport it is around a 45 minute drive to Park City.</p>
+    <a href="https://www.google.com/maps/dir/SALT+LAKE+CITY+airport+(SLC),+North+Terminal+Drive,+Salt+Lake+City,+Utah/park+city/@40.7101589,-111.8842876,11z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x8752f38b67d7f4e9:0x6f1f4326f5594819!2m2!1d-111.9790706!2d40.7899404!1m5!1m1!1s0x87520f632c6303fd:0xd871c4df25375794!2m2!1d-111.4979729!2d40.6460622">Map from airpot to Park City</a>
+ <h2 class="titles" style="text-decoration:underline">Once You're There</h2>
+  <h3>Hotels:</h3>
+   <p>There are many different hotels in Park City, ranging from 1 star to 5 star.<br>Below will be a list of a few hotels and their prices, including the hotel we are staying in.</p>
+    <table class="table">
+      <tr>
+        <th>Park City Peaks Hotel</th>
+        <th>Holiday Inn Express</th>
+        <th>Silverado Lodge</th>
+        <th>Park Regency</th>
+     </tr>
+     <tr>
+       <th>$299 a night. ~$900 total.</th>
+       <th>~$500 total</th>
+       <th>~$1080 total</th>
+       <th>~$1080 total</th>
+     </tr>
+   </table>
+ <h2 class="border1">Activities:</h2>
+  <p>There are many activities one can enjoy in Park City! While Park City is known for its skiing, it also has many other activities one can enjoy.</p>
+  <p>If you want to try and ski you need to rent skis and buy a lift ticket</p>
+   <table class="table">
+     <tr>
+       <th>Rental Skis</th>
+       <th>Lift Ticket</th>
+     </tr>
+     <tr>
+       <th>~$45 per day</th>
+       <th>~$142 per day</th>
+     </tr>
+    </table>
+  <h3>There are three different areas in close vicinity to Park City.</h3>
+    <h4>Park City:</h4>
+     <p>Park City is known for its skiing, but there are plenty other things to do if that's not for you.<a href="https://www.visitparkcity.com/things-to-do/"> Activities</a></p>
+      <dl>
+        <dt>Dog Sledding</dt>
+        <dt>Tubing</dt>
+        <dt>Snowmobiling</dt>
+        <dt>Visit State Parks</dt>
+      </dl>
+    <h4>Salt Lake City:<img src={{url_for('static',filename='parkcitynight.jpeg')}} style="float:right" width="400px" height="250px"></img></h4>
+     <p>Salt Lake City is only a 45 minute drive from Park City and has all that any big city has to offer, plus some special things.<a href="https://www.visitsaltlake.com/things-to-do/"> Activities</a></p>
+      <dl>
+        <dt>Salt Lake Brewery Tour</dt>
+        <dt>Museums</dt>
+        <dt>The Great Salt Lake</dt>
+      </dl>
+    <h4>Olympic Park::</h4>
+     <p>Olympic Park, Nestled between Salt Lake City and Park City, is the perfect place to go for the adventurous type. <a href="https://utaholympiclegacy.org/location/utah-olympic-park/"> Activities</a></p>
+      <dl>
+        <dt>Olympic Park Museum</dt>
+        <dt>Bobsledding</dt>
+      </dl>
+
+
+<style>
+  .border1 {
+    border-style: hidden hidden solid solid;
+    color:black;
+    margin-right:92%;
+  }
+  .titles {
+    text-align:center;
+  /* }
+body {
+  font-size: 100%;
+}
+h1 {
+  font-size:2.7em;
+}
+h2 {
+  font-size:2.0em;
+}
+p {
+  font-size:1.4em;
+} */
+</style>
+{% endblock %}
