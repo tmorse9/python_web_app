@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <div class="container">
+    <div class="panel-group">
+      {% for profile in profiles %}
+        <div class="panel panel-info">
+          <div class="panel-heading">{{  profile.gamer_tag  }}</div>
+          <div class="panel-body">
+            Top Games: {{ profile.top_games }} </br>
+            Prefered System: {{ profile.prefered_system }} </br>
+            Owned Systems: {{ profile.systems }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="databaseoutput">
+    {% for role in roles %}
+      <p> {{ role.name }} </p>
+    {% endfor %}
+
+    {% for user in users %}
+      <p> {{ user.first_name }} </p>
+    {% endfor %}
+
+    {% for profile in profiles %}
+      <p> {{ profile.gamer_tag }} </p>
+    {% endfor %}
+
+    {% for system in systems %}
+      <p> {{ system.name }} </p>
+    {% endfor %}
+
+    {% for game in games %}
+      <p> {{ game.name }} </p>
+      <p> {{ game.system }} </p>
+    {% endfor %}
+
+  </div>
+{% endblock %}
